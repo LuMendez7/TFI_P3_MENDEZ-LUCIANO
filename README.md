@@ -1,139 +1,213 @@
 # 🍔 Food by Lu
 
-Sistema web completo de gestión de pedidos de comida desarrollado como Trabajo Integrador utilizando Java + Spring Boot en el backend y TypeScript + Vite en el frontend.
+Sistema web completo para la gestión de pedidos de comida desarrollado como Trabajo Práctico Integrador de Programación III utilizando **Java 17 + Spring Boot** para el backend y **TypeScript + Vite** para el frontend.
 
 ---
 
 # 📌 Descripción del proyecto
 
-Food by Lu es una aplicación web inspirada en plataformas de pedidos de comida online.
+Food by Lu es una aplicación web inspirada en plataformas de pedidos online que permite a clientes realizar compras de comida y a administradores gestionar completamente el sistema.
 
-El sistema permite:
-
-✅ Registro e inicio de sesión de usuarios  
-✅ Diferenciación de roles (ADMIN / CLIENTE)  
-✅ Visualización de productos por categorías  
-✅ Carrito de compras dinámico  
-✅ Checkout y generación de pedidos  
-✅ Gestión completa de productos  
-✅ Gestión de categorías  
-✅ Administración de pedidos  
-✅ Cambio de estados de pedidos  
-✅ Visualización de pedidos propios por cliente  
-✅ Persistencia de datos con base de datos H2  
-✅ Diseño responsive y moderno  
+El proyecto implementa una arquitectura Cliente–Servidor mediante una API REST desarrollada con Spring Boot, aplicando buenas prácticas de organización del código, reutilización, separación de responsabilidades y persistencia de datos.
 
 ---
 
-# 🛠️ Tecnologías utilizadas
+# 🏗️ Arquitectura del sistema
 
-## 🔹 Backend
-- Java 17
-- Spring Boot
-- Spring Data JPA
-- Hibernate
-- H2 Database
-- Maven
+```
+Frontend (TypeScript + Vite)
+            │
+            ▼
+      API REST (Spring Boot)
+            │
+            ▼
+ Controller → Service → Repository
+            │
+            ▼
+      Spring Data JPA
+            │
+            ▼
+        Base de datos H2
+```
 
-## 🔹 Frontend
-- TypeScript
-- Vite
-- HTML5
-- CSS
+El backend fue desarrollado utilizando una arquitectura en capas, separando claramente las responsabilidades entre controladores, servicios y repositorios.
 
 ---
 
-# 🎨 Características principales
+# 🚀 Funcionalidades principales
 
-## 👤 Sistema de usuarios
+## 👤 Usuarios
+
 - Registro de clientes
 - Inicio de sesión
-- Persistencia de sesión con LocalStorage
+- Persistencia de sesión mediante LocalStorage
 - Roles diferenciados:
   - ADMIN
   - CLIENTE
 
 ---
 
-## 🍟 Gestión de productos
+## 🍔 Productos
+
 El administrador puede:
 
 - Crear productos
 - Editar productos
 - Eliminar productos
-- Activar / desactivar disponibilidad
+- Activar o desactivar disponibilidad
 - Asignar categorías
-- Subir imágenes
+- Gestionar imágenes
 - Gestionar stock
 
+Los clientes pueden:
+
+- Visualizar productos
+- Buscar productos
+- Filtrar por categorías
+- Consultar detalles del producto
+
 ---
 
-## 📂 Gestión de categorías
+## 📂 Categorías
+
 - Creación de categorías
-- Asociación de productos a categorías
-- Filtros dinámicos por categoría
+- Asociación de productos
+- Filtros dinámicos
 
 ---
 
-## 🛒 Carrito de compras
+## 🛒 Carrito
+
 - Agregar productos
-- Aumentar/disminuir cantidades
+- Modificar cantidades
 - Eliminar productos
-- Persistencia en LocalStorage
-- Cálculo automático de totales
+- Persistencia mediante LocalStorage
+- Cálculo automático del total
 
 ---
 
-## 📦 Sistema de pedidos
+## 📦 Pedidos
+
 Los clientes pueden:
 
 - Realizar pedidos
-- Consultar sus pedidos
-- Ver estados de compra
+- Consultar únicamente sus pedidos
+- Visualizar estado de compra
 
 El administrador puede:
 
 - Ver todos los pedidos
-- Cambiar estados:
-  - PENDIENTE
-  - PREPARANDO
-  - EN CAMINO
-  - ENTREGADO
-  - CANCELADO
+- Consultar detalle completo
+- Modificar el estado del pedido
+
+Estados disponibles:
+
+- PENDIENTE
+- PREPARANDO
+- EN CAMINO
+- ENTREGADO
+- CANCELADO
 
 ---
 
 # 🧠 Funcionalidades implementadas
 
-✅ Login y registro  
-✅ Protección por roles  
-✅ Renderizado dinámico  
-✅ CRUD completo  
-✅ Modales interactivos  
-✅ Toasts de confirmación  
-✅ Filtros y buscador  
-✅ Ordenamiento de productos  
-✅ Vista detalle de producto  
-✅ Responsive Design  
-✅ Dashboard administrativo  
-✅ Persistencia de sesión  
-✅ Manejo de estados de pedido  
-✅ Manejo de imágenes en productos  
+- ✅ Login
+- ✅ Registro
+- ✅ Protección por roles
+- ✅ CRUD completo
+- ✅ Gestión de productos
+- ✅ Gestión de categorías
+- ✅ Gestión de pedidos
+- ✅ Cambio de estados
+- ✅ Visualización de pedidos por cliente
+- ✅ Dashboard administrativo
+- ✅ Renderizado dinámico
+- ✅ Persistencia de sesión
+- ✅ Persistencia de datos con H2
+- ✅ Responsive Design
+- ✅ DTO para creación de pedidos
+- ✅ Arquitectura en capas
+- ✅ BaseEntity reutilizable
+- ✅ BaseRepository genérico
+- ✅ Relaciones JPA
+- ✅ Manejo transaccional mediante @Transactional
+- ✅ Contraseñas encriptadas con BCrypt
+- ✅ Documentación automática mediante Swagger/OpenAPI
 
 ---
 
-# 🎨 Diseño UI/UX
+# 🛠️ Tecnologías utilizadas
 
-La aplicación fue diseñada con una interfaz moderna utilizando:
+## Backend
 
-- Gradientes
-- Glassmorphism
-- Sombras suaves
-- Paleta violeta personalizada
-- Cards responsivas
-- Navegación visual intuitiva
-- Badges de estados
-- Animaciones suaves
+- Java 17
+- Spring Boot
+- Spring Data JPA
+- Hibernate
+- H2 Database
+- Gradle
+- Lombok
+- BCrypt
+- Swagger / OpenAPI
+
+---
+
+## Frontend
+
+- TypeScript
+- Vite
+- HTML5
+- CSS3
+- Fetch API
+- LocalStorage
+
+---
+
+# 🗄️ Base de datos
+
+El proyecto utiliza una base de datos H2 persistente.
+
+Acceso a la consola:
+
+```
+http://localhost:8080/h2-console
+```
+
+Configuración:
+
+```
+JDBC URL
+
+jdbc:h2:file:C:/Users/Usuario/Desktop/TFI_P3_MENDEZ LUCIANO/Proyecto-Integrador-Prog3/foodstore-backend/foodstore/data/foodstoredb
+
+User
+
+sa
+
+Password
+
+(vacío)
+```
+
+---
+
+# 📑 Documentación de la API
+
+El proyecto incorpora documentación automática mediante Swagger/OpenAPI.
+
+Acceso:
+
+```
+http://localhost:8080/swagger-ui/index.html
+```
+
+Desde Swagger es posible:
+
+- visualizar todos los endpoints
+- consultar modelos
+- probar peticiones
+- verificar respuestas del backend
 
 ---
 
@@ -141,7 +215,7 @@ La aplicación fue diseñada con una interfaz moderna utilizando:
 
 ## Frontend
 
-```txt
+```
 src
 │
 ├── pages
@@ -160,166 +234,173 @@ src
 
 ## Backend
 
-```txt
+```
 src/main/java/com/tuuniversidad/foodstore
 │
 ├── controller
+├── dto
+├── exception
 ├── model
 ├── repository
 ├── service
-└── config
+│    └── impl
+├── config
+└── FoodstoreApplication
 ```
 
 ---
 
 # 🚀 Cómo ejecutar el proyecto
 
-# 🔹 Backend
+## Backend
 
-## 1. Abrir el proyecto backend en IntelliJ
+Abrir el proyecto en IntelliJ IDEA.
 
-## 2. Ejecutar:
+Ejecutar:
 
-```txt
+```
 FoodstoreApplication
 ```
 
-El backend correrá en:
+El backend iniciará en:
 
-```txt
+```
 http://localhost:8080
 ```
 
 ---
 
-# 🔹 Frontend
+## Frontend
 
-## 1. Abrir la carpeta frontend en VS Code
+Abrir la carpeta frontend en Visual Studio Code.
 
-## 2. Instalar dependencias
+Instalar dependencias:
 
 ```bash
 npm install
 ```
 
-## 3. Ejecutar el proyecto
+Ejecutar:
 
 ```bash
 npm run dev
 ```
 
-El frontend correrá en:
+El frontend iniciará en:
 
-```txt
-http://localhost:5201
 ```
-
----
-
-# 🗄️ Base de datos H2
-
-Acceso a consola H2:
-
-```txt
-http://localhost:8080/h2-console
-```
-
-## Configuración:
-
-```txt
-JDBC URL:
-jdbc:h2:file:C:/Users/Usuario/Desktop/TFI_P3_MENDEZ LUCIANO/Proyecto-Integrador-Prog3/foodstore-backend/foodstore/data/foodstoredb
-
-User:
-sa
-
-Password:
-(vacío)
+http://localhost:5174
 ```
 
 ---
 
 # 🔑 Usuarios de prueba
 
-## 👑 ADMIN
+## Administrador
 
-```txt
-Email:
+Email
+
+```
 lumen@gmail.com
+```
 
-Password:
+Contraseña
+
+```
 lu123
 ```
 
 ---
 
-## 👤 CLIENTE
+## Cliente
 
-```txt
-Email:
+Email
+
+```
 lumendez@gmail.com
+```
 
-Password:
+Contraseña
+
+```
 lu1234
 ```
 
 ---
 
-# 📷 Capturas del sistema
+# 📷 Capturas sugeridas
 
-## Funcionalidades principales
-
-- Login y registro
-- Dashboard administrativo
-- Gestión de productos
-- Carrito de compras
+- Login
+- Registro
+- Página principal
+- Productos
+- Carrito
 - Checkout
+- Pedidos del cliente
+- Panel administrativo
+- Gestión de productos
 - Gestión de pedidos
-- Vista de pedidos por cliente
-- Estados dinámicos
+- Detalle del pedido
+- Swagger
+- Consola H2
 
 ---
 
 # 📚 Aprendizajes obtenidos
 
-Durante el desarrollo de este proyecto se trabajó con:
+Durante el desarrollo del proyecto se aplicaron conocimientos sobre:
 
-- Arquitectura cliente-servidor
-- APIs REST
-- Manejo de estados
-- Persistencia de datos
+- Arquitectura Cliente–Servidor
+- API REST
+- Spring Boot
+- Spring Data JPA
+- Hibernate
+- Relaciones entre entidades
+- Arquitectura en capas
 - CRUD completo
-- Manejo de eventos
-- Organización modular
-- Diseño responsive
-- Integración frontend-backend
+- DTO (Data Transfer Objects)
+- BaseEntity y herencia
+- BaseRepository genérico
+- Manejo transaccional mediante @Transactional
+- Persistencia con H2
+- BCrypt para encriptación de contraseñas
+- Swagger/OpenAPI
+- Integración Frontend–Backend
+- Responsive Design
+- Organización modular del código
 
 ---
 
 # ✅ Estado actual del proyecto
 
-✔️ Proyecto funcional  
-✔️ Backend conectado correctamente  
-✔️ Frontend responsive  
-✔️ Persistencia funcionando  
-✔️ Roles implementados  
-✔️ CRUD completo  
-✔️ Gestión de pedidos funcional  
-✔️ Diseño moderno terminado  
+- ✔ Proyecto completamente funcional
+- ✔ Backend conectado al frontend
+- ✔ Persistencia mediante H2
+- ✔ CRUD completo
+- ✔ Gestión de productos
+- ✔ Gestión de categorías
+- ✔ Gestión de pedidos
+- ✔ Roles implementados
+- ✔ Seguridad mediante BCrypt
+- ✔ Documentación con Swagger
+- ✔ Arquitectura en capas
+- ✔ BaseEntity y BaseRepository implementados
+- ✔ DTO para pedidos
+- ✔ Interfaz moderna y responsive
 
 ---
 
 # 👨‍💻 Autor
 
-## Luciano David Mendez
+**Luciano David Méndez**
 
-Trabajo Integrador — Programación III
+Trabajo Práctico Integrador — Programación III
 
 ---
 
 # ⭐ Observaciones
 
-El proyecto fue desarrollado aplicando buenas prácticas de organización, separación de responsabilidades y experiencia visual moderna, buscando simular una aplicación real de pedidos online.
+El proyecto fue desarrollado aplicando buenas prácticas de programación orientada a objetos y una arquitectura en capas basada en Controller–Service–Repository. Se incorporaron mecanismos de reutilización mediante BaseEntity y BaseRepository, documentación automática con Swagger/OpenAPI, manejo transaccional con @Transactional, uso de DTO para la creación de pedidos y encriptación de contraseñas mediante BCrypt. El objetivo fue simular el funcionamiento de una aplicación real de pedidos de comida, priorizando tanto la organización interna del código como una experiencia de usuario moderna e intuitiva.
 
 ---
 
