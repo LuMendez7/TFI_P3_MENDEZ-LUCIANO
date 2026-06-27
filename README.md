@@ -405,9 +405,9 @@ El proyecto fue desarrollado aplicando buenas prácticas de programación orient
 ---
 
 # Link del video expositivo:
-https://drive.google.com/file/d/1vw7rvn-tSR6unlHKVi9NnyPL69Qihajj/view?usp=sharing 
+https://drive.google.com/file/d/1OKBUJuMc2pcepL2MmJXJhyjF-krqtMqP/view?usp=sharing
 
 ---
 
 # Link del Trabajo Final en PDF:
-https://drive.google.com/file/d/1SqHJFoig8Vtf3e48UK0cKmdkXvt4vHOM/view?usp=sharing
+https://drive.google.com/file/d/1Q55gM9gxMIlWMn4HJRQ7QnBOcoevbQVJ/view?usp=sharing
